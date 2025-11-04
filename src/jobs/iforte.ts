@@ -150,7 +150,7 @@ export async function syncZabbixData(date: string = 'yesterday') {
   let graphIds: string[] = []
   for (const { csid, graphId } of graphRows) {
     if (prevCsid !== csid && prevCsid !== 0) {
-      graphsMap.set(csid, graphIds)
+      graphsMap.set(prevCsid, graphIds)
       graphIds = []
     }
     prevCsid = csid
