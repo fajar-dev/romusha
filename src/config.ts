@@ -175,3 +175,17 @@ export const nusacontactQueueGroups =
   process.env.NUSACONTACT_QUEUE_GROUPS || '["helpdesk","billing"]'
 export const nusacontactQueueMetricFilePath =
   process.env.NUSACONTACT_QUEUE_METRIC_FILE_PATH || '/tmp/nusacontact.txt'
+
+// gamas metrics exporter
+export const gamasMassIncidentPeriodSeconds =
+  process.env.GAMAS_MASS_INCIDENT_PERIOD_SECONDS || 60
+export const gamasMassIncidentCountThreshold = 
+Number(process.env.GAMAS_MASS_INCIDENT_COUNT_THRESHOLD || 8)
+export const gamasMaxIncidentAgeSeconds =
+  process.env.GAMAS_MAX_INCIDENT_AGE_SECONDS || 604800
+export const gamasAlertApiUrl =
+  process.env.GAMAS_ALERT_API_URL ||
+  'http://alertmanager.nusa.net.id:9093/api/v2/alerts/groups'
+export const gamasMetricName = process.env.GAMAS_METRIC_NAME || 'gamas'
+export const gamasMetricFilePath =
+  process.env.GAMAS_METRIC_FILE_PATH || '/tmp/gamas.txt'

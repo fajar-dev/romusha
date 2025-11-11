@@ -30,6 +30,8 @@ This worker can perform the following jobs:
 *   `autoCloseSurveyTickets`: Automatically closes survey tickets.
 *   `autocloseHelpdeskTicket`: Automatically closes helpdesk tickets.
 *   `syncNusacontactCustomer`: Synchronizes customer data to NusaContact.
+*   `genNusacontactQueueMetrics`: Generates NusaContact queue metrics.
+*   `genGamasMetrics`: Generates Gamas metrics.
 
 ## Configuration
 
@@ -89,3 +91,17 @@ The worker can be configured using the following environment variables:
 *   `NUSACONTACT_SYNC_CONTACT_API_URL`: API endpoint for syncing contacts with NusaContact
 *   `NUSACONTACT_API_KEY`: API key for authenticating requests to NusaContact
 *   `NUSACONTACT_SYNC_CONTACT_MAX_ATTEMPTS`: Maximum number of attempts for syncing contacts to NusaContact
+*   `NUSACONTACT_METRICS_URL`: NusaContact metrics URL
+*   `NUSACONTACT_METRICS_NAME`: NusaContact metrics name
+*   `NUSACONTACT_QUEUE_METRICS_FILE_PATH`: Path to the NusaContact queue metrics file
+*   `NUSACONTACT_QUEUE_METRICS_GROUPS`: JSON array of groups to filter enqueued items (default: `[]`)
+*   `GAMAS_METRIC_MASS_INCIDENT_PERIOD_SECONDS`: Mass incident period in seconds (default: `60`)
+*   `GAMAS_METRIC_MASS_INCIDENT_COUNT_THRESHOLD`: Mass incident count threshold (default: `8`)
+*   `GAMAS_METRIC_MAX_INCIDENT_AGE_SECONDS`: Maximum incident age in seconds (default: `604800`)
+*   `GAMAS_METRIC_ALERT_API_URL`: Alert API URL
+*   `GAMAS_METRIC_NAME`: Gamas metrics name
+*   `GAMAS_METRIC_FILE_PATH`: Path to the Gamas metrics file
+
+
+
+
