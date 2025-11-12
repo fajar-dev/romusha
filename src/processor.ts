@@ -32,6 +32,7 @@ import { syncNusacontactCustomer } from './nusacontact'
 import { generateNusacontactQueueMetrics } from './nusacontact-exporter'
 import { generateGamasMetrics } from './gamas-exporter'
 import { generateOverSpeedBlockedSubscriberMetrics } from './overspeed-exporter'
+import { deleteDeadGraphLinks } from './dead-graph'
 
 export async function processJob(message: JsMsg, nc: NatsConnection) {
   const subjectParts = message.subject.split('.')
@@ -123,6 +124,9 @@ export async function processJob(message: JsMsg, nc: NatsConnection) {
       break
     case 'genOverSpeedBlockedSubscriberMetrics':
       await generateOverSpeedBlockedSubscriberMetrics()
+      break
+    case 'delDeadGraphLink':
+      await deleteDeadGraphLinks()
       break
     default:
       logger.warn(`Unknown job: ${jobName}`)
