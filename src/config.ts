@@ -31,6 +31,9 @@ export const NUSAWORK_AUTH_CLIENT_ID = Number(
 export const NUSAWORK_AUTH_CLIENT_SECRET =
   process.env.NUSAWORK_AUTH_CLIENT_SECRET || 'xxxxxxxxxxxxxxxx'
 
+export const nusaworkAttendanceApiUrl =
+  process.env.NUSAWORK_ATTENDANCE_API_URL || ''
+
 export const EMPLOYEE_CHART_FILE =
   process.env.EMPLOYEE_CHART_FILE || '/tmp/employee-chart.json'
 
@@ -199,3 +202,7 @@ export const overSpeedBlockedSubscriberMetricFilePath =
   '/tmp/metric.txt'
 export const overSpeedBlockedSubscriberThreshold =
   process.env.OVER_SPEED_BLOCKED_SUBSCRIBER_THRESHOLD || 1000000
+
+export const visitCardSummaryApiUrl =
+  process.env.VISITCARD_SUMMARY_API_URL || ''
+export const visitCardToken = process.env.VISITCARD_TOKEN || ''
