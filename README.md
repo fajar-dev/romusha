@@ -36,6 +36,7 @@ This worker can perform the following jobs:
 *   `delDeadGraphLink`: Deletes dead graph links from NIS database.
 *   `fetchEngineerTickets`: Fetches engineer tickets and sends WhatsApp notification.
 *   `sendGiftVoucherToBirthdayEmployees`: Sends gift vouchers to birthday employees.
+* `sendNotificationNextWeekBirthdayEmployees`: Sends notification to PICs about employees with birthdays in the next calendar week.
 
 ## Configuration
 
